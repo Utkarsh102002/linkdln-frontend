@@ -48,9 +48,7 @@ function Feed() {
           style={{ width: "100%", height: "80px", padding: "10px" }}
         ></textarea>
         <br />
-
         <button onClick={createPost}>Post</button>
-
         <hr />
 
         <h3>Feed</h3>
@@ -71,8 +69,8 @@ function Feed() {
             <button onClick={() => likePost(post._id)}>
               ❤️ Like ({post.likes})
             </button>
-            <br />
 
+            <br />
             <small style={{ color: "gray" }}>
               {new Date(post.createdAt).toLocaleString()}
             </small>

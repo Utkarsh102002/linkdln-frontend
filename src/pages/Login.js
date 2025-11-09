@@ -6,20 +6,24 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const login = async () => {
-    const res = await axios.post(
-      "https://linkdln-backend.onrender.com/auth/login",
-      {
-        email,
-        password,
+    try {
+      const res = await axios.post(
+        "https://linkdln-backend.onrender.com/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+
+      alert(res.data.message);
+
+      if (res.data.token) {
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("name", res.data.name);
+        window.location.href = "/feed";
       }
-    );
-
-    alert(res.data.message);
-
-    if (res.data.token) {
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("name", res.data.name);
-      window.location.href = "/feed";
+    } catch (err) {
+      alert("Login Failed!");
     }
   };
 
@@ -37,6 +41,7 @@ function Login() {
       <br />
 
       <button onClick={login}>Login</button>
+      <br />
       <br />
       <a href="/signup">Don't have an account? Signup</a>
     </div>
