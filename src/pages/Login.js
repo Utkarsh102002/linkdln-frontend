@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { API_BASE } from "../config";
-
+import Navbar from "../components/Navbar";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,6 +20,7 @@ function Login() {
 
   return (
     <div style={{ padding: 20 }}>
+      <Navbar/>
       <h2>Login</h2>
       <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
       <br />
