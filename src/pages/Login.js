@@ -19,22 +19,26 @@ function Login() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <Navbar/>
-      <h2>Login</h2>
-      <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <br />
-      <input
-        placeholder="Password"
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br />
-      <button onClick={login}>Login</button>
-      <br />
-      <br />
-      <a href="/signup">Please Sign up First</a>
-      <p>Pleast Wait my app is working it takes little Time to login,signup</p>
+    <div>
+      <Navbar />
+      <div style={{ padding: 20 }}>
+        <h2>Login</h2>
+        <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+        <br />
+        <input
+          placeholder="Password"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <br />
+        <button onClick={login}>Login</button>
+        <br />
+        <br />
+        <a href="/signup">Please Sign up First</a>
+        <p>
+          Pleast Wait my app is working it takes little Time to login,signup
+        </p>
+      </div>
     </div>
   );
 }
