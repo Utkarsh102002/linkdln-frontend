@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { API_BASE } from "../config";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar2";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

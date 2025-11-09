@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { API_BASE } from "../config";
-
+import Navbar from "../components/Navbar2";
 function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,19 +14,22 @@ function Signup() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Signup</h2>
-      <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
-      <br />
-      <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <br />
-      <input
-        placeholder="Password"
-        type="password"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <br />
-      <button onClick={signup}>Signup</button>
+    <div>
+      <Navbar />
+      <div style={{ padding: 20 }}>
+        <h2>Signup</h2>
+        <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
+        <br />
+        <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+        <br />
+        <input
+          placeholder="Password"
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <br />
+        <button onClick={signup}>Signup</button>
+      </div>
     </div>
   );
 }
