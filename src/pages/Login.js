@@ -32,7 +32,8 @@ function Login() {
       <button onClick={login}>Login</button>
       <br />
       <br />
-      <a href="/signup">Don't have an account? Signup</a>
+      <a href="/signup">Please Sign up First</a>
+      <p>Pleast Wait my app is working it takes little Time to login,signup</p>
     </div>
   );
 }

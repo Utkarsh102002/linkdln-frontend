@@ -10,6 +10,7 @@ function Signup() {
   const signup = async () => {
     await axios.post(`${API_BASE}/auth/signup`, { name, email, password });
     alert("Signup successful!");
+    window.location.href = "/login";
   };
 
   return (

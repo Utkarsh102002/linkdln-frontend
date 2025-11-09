@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+LinkedIn Clone - Full Stack Social Media Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simplified LinkedIn-like social platform where users can sign up, log in, create posts, view posts from all users, and like posts.  
+The goal of this assignment was to demonstrate complete end-to-end full stack development**, including frontend UI, backend API development, authentication, database integration, and cloud deployment.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. User Authentication
+Secure Signup & Login system using Email + Password.
+User session handled using localStorage.
+Logged-in user's name is displayed on the top navigation bar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Create & Share Posts
+Users can create text-based posts. Each post includes:
+User’s name
+Post content
+Timestamp
 
-### `npm test`
+3. Global Public Feed
+All users can view posts made by everyone.
+Posts are displayed in reverse chronological order (latest first).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Like Feature (Bonus Implemented)
+Each post has a like button.
+Like count updates automatically.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🧠 System Architecture (High-Level Design)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Frontend handles UI + state management.
+Backend handles API routing, authentication logic, and post operations.
+MongoDB Atlas stores user & post data securely.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Layer | Technology Used |
+|------|----------------|
+| Frontend | React.js, JavaScript, Axios |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas (Cloud) |
+| Deployment (Frontend) | Vercel |
+| Deployment (Backend) | Render |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+🌐 Live Demo Links
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Service | URL |
+|--------|-----|
+| Frontend | https://linkdln-frontend.vercel.app |
+| Backend | https://linkdln-backend.onrender.com |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Development Workflow (How I Built the Project)
 
-### Analyzing the Bundle Size
+1.Designed data models for Users and Posts in MongoDB.
+2. Built secure authentication routes (`/auth/signup`, `/auth/login`).
+3. Implemented Post APIs (`/post/create`, `/post/all`, `/post/like`).
+4. Created React pages for Signup, Login, and Feed.
+5. Used Axios to connect frontend with backend.
+6. Enabled secure cross-origin communication via CORS.
+7. Deployed:
+   - Backend → Render
+   - Frontend → Vercel
+   - Database → MongoDB Atlas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
